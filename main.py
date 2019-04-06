@@ -67,7 +67,7 @@ mapping = gr.states_to_graph(validS, init_state)
 # make the state graph from the DOT file
 state_graph = pydotplus.graph_from_dot_file('Graph.dot')
 # write the graph as avg format
-state_graph.write_svg('State_Graph.svg')
+state_graph.write_png('State_Graph_' + str(init_state) +'.png')
 
 # printing the states of the graph
 print("\t  Im  Id  Vm  Vd  Hm  Hd  Pm  Pd  Om  Od")
