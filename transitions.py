@@ -36,7 +36,7 @@ def valid_transition(state1,state2):
     # or the magnitude or the derivative of the inflow is 0 
     if state1[0] == state2[0] and state1[1] == state2[1] or state1[0] == 0 or state1[1] == 0:
         for i in range(1,int(len(state1)/2)):
-            if state1[2*i] == state2[2*i] and state1[2*i+1] != state2[2*i+1] and state1[2*i+1] != 0:
+            if state1[2*i] == state2[2*i] and state1[2*i+1] != 0 and state1[2*i+1] != state2[2*i+1] :
                 return 0            
         return 0   
          
@@ -51,7 +51,6 @@ def transition_states(state,validS):
     return np.array(result)
 
 
-aux = transition_states(aux2[0],validS)
     
             
             
