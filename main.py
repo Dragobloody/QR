@@ -87,7 +87,6 @@ print('Check "%s" for the transition graph!'%(graph_name))
 ########################################################################
 ####################### State details ##################################
 
-st = input('\nEnter state number to see description, anything else to exit:\n0 - see states again\n')
 
 # variables used for printing the description
 entities = ["Inflow", "Volume", "Height", "Pressure", "Outflow"]
@@ -108,6 +107,8 @@ def get_key(val):
 			return key
 
 	raise -1
+
+st = input('\nEnter state number to see description, anything else to exit:\n0 - see states again\n')
 # get description until wrong input or out of range index
 while( st.isdigit() and int(st) in range(1 + len(mapping))):
 	if int(st) == 0:
